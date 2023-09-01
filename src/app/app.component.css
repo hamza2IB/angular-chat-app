@@ -1,0 +1,8 @@
+header.app-bar {
+    min-height: 80px;
+    border: 1px solid black;
+}
+
+main {
+    min-height: calc(100vh - 80px);
+}

@@ -1,8 +1,24 @@
 <style>
-.chat-page{
-    padding-top: 100px;
-}
+    .ui.grid {
+        margin: 0 !important;
+    }
+
+    .chat-page {
+        border: 1px solid red;
+    }
+
+    .column {
+        border: 1px solid black;
+    }
 </style>
 <section class="chat-page">
-    <h1>Chat Page</h1>
+    <div class="ui grid">
+        <div class="twelve wide column">
+            <div class="ui grid">
+                <div class="four wide column"></div>
+                <div class="twelve wide column"></div>
+            </div>
+        </div>
+        <div class="four wide column"></div>
+    </div>
 </section>
