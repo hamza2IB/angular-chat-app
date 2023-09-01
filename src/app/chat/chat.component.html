@@ -1,91 +1,38 @@
 <style>
+    .ui.grid {
+        margin: 0 !important;
+    }
+
+    .ui.grid>.column:not(.row) {
+        padding: 0;
+    }
+
     .chat-page {
-        padding-top: 100px;
+        border: 1px solid red;
     }
-    .user-item{
-        display: flex;
-        align-items: center;
+
+    .column {
+        border: 1px solid black;
     }
-    .points span{
-        color: #fff;
-        font-size: 8px;
+
+    .user-profile {
+        min-height: 80vh;
+        background-color: red;
     }
 </style>
-<section class="chat-page">
-    <div class="container-fluid ">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-3 bg-danger p-1">
-                        <div class="left-side-bar-content">
-                            <div class="search-bar mb-3">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search here"
-                                        aria-label="Search">
-                                </form>
-                            </div>
-                            <div class="users-list">
-                                <div class="user-item">
-                                    <div class="points-arrow">
-                                        <img src="/assets/icons/Vector.png" alt="arrow-up">
-                                        <div class="user-points">
-                                            <span>+10</span>
-                                        </div>
-                                    </div>
-                                    <div class="user-image">
-                                        <img src="/assets/icons/Oval.png" alt="user-img">
-                                    </div>
-                                    <div class="user-desc">
-                                        <div class="user-name">
-                                            <h6>Azeem
-                                                <span class="message-time">Today at 7:44 PM</span>
-                                            </h6>
-                                        </div>
-                                        <div class="user-badges">
-                                            <span class="user-total-points">90</span>
-                                            <span class="user-badge">
-                                                <img src="/assets/icons/valour.png" alt="user-img">
-                                            </span>
-                                            <span class="user-badge">
-                                                <img src="/assets/icons/merit.png" alt="user-img">
-                                            </span>
-                                            <span class="user-badge">
-                                                <img src="/assets/icons/trader.png" alt="user-img">
-                                            </span>
-                                            <span class="user-badge">
-                                                <img src="/assets/icons/strategist.png" alt="user-img">
-                                            </span>
-                                        </div>
-                                        <div class="user-message-text">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sunt.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9 bg-success p-5">
-                    </div>
-                </div>
+<section class="chat-page ui container">
+    <div class="ui grid">
+        <div class="twelve wide column">
+            <div class="ui grid">
+                <div class="four wide column"></div>
+                <div class="twelve wide column"></div>
             </div>
-            <div class="col-md-3 bg-primary p-5">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima nobis quibusdam iure ut inventore
-                    consectetur delectus maxime esse. Eum, esse cumque sint eligendi odit quia sit est hic illo
-                    veritatis voluptatibus quod magnam ipsam facere quae iste vero expedita. Nostrum fugit dolore totam
-                    accusamus odio beatae itaque tempore ipsa eum libero earum sit eaque unde porro aliquid, possimus
-                    eos enim maiores. Rem est consequatur dignissimos aliquid tenetur excepturi, magni esse! Dolor
-                    temporibus cupiditate, delectus veniam mollitia quaerat eveniet officiis earum at inventore,
-                    architecto consequuntur quia illo harum corporis fugiat laudantium. Perferendis harum ut optio, quos
-                    voluptatem laborum accusantium mollitia, error placeat, cum expedita facilis magni esse eveniet
-                    dolores beatae repudiandae tempore et commodi? Nihil nulla quae mollitia, nemo similique aspernatur!
-                    Maiores, minima et? Inventore, consequuntur officiis odio quo, dolores velit ab explicabo iusto
-                    totam nisi ea itaque repellat, enim adipisci quam ut molestiae? Voluptatem maxime recusandae
-                    repellendus nostrum optio. Aut minima asperiores ut voluptatum laboriosam dolorum repellat culpa
-                    itaque saepe, totam porro architecto animi ullam maiores quam natus cum illo laborum consequatur,
-                    nesciunt facilis id iusto, voluptatibus fugiat. Itaque nulla quam eos dolor reiciendis sint aliquam
-                    quo, debitis beatae, non distinctio nobis pariatur facere officiis aut dicta quasi odio enim?
-                </p>
+        </div>
+        <div class="four wide column">
+            <div class="user-profile">
+                <div class="profile-img">
+                    <img src="/assets/icons/profile.png" />
+                </div>
             </div>
         </div>
     </div>
