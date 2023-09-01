@@ -3,7 +3,7 @@
         margin: 0 !important;
     }
 
-    .ui.grid>.column:not(.row){
+    .ui.grid>.column:not(.row) {
         padding: 0;
     }
 
@@ -14,8 +14,13 @@
     .column {
         border: 1px solid black;
     }
+
+    .user-profile {
+        min-height: 80vh;
+        background-color: red;
+    }
 </style>
-<section class="chat-page">
+<section class="chat-page ui container">
     <div class="ui grid">
         <div class="twelve wide column">
             <div class="ui grid">
@@ -24,9 +29,9 @@
             </div>
         </div>
         <div class="four wide column">
-            <div class="container">
+            <div class="user-profile">
                 <div class="profile-img">
-                    <img src="/assets/icons/profile.png"/>
+                    <img src="/assets/icons/profile.png" />
                 </div>
             </div>
         </div>
