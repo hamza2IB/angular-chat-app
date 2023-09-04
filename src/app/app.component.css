@@ -1,8 +1,137 @@
 header.app-bar {
     min-height: 80px;
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
 }
 
 main {
     min-height: calc(100vh - 80px);
+    background-color: #1B1C1D;
+}
+
+.logo-link {
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    padding: 0.78571429em 0.92857143em;
+    margin: 0 0.35714286em;
+    background: 0 0;
+    -webkit-transition: color .1s ease;
+    transition: color .1s ease;
+    border-radius: 0.28571429rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ui.secondary.menu .item {
+    padding: 0px;
+}
+
+.ui.secondary.menu {
+    width: 100%;
+}
+
+.ui.secondary.menu .active.item {
+    background-color: inherit;
+    color: #fff;
+}
+
+.main-logo {
+    color: #F4A933;
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+.icon-items {
+    display: flex;
+    gap: 24px;
+    padding-left: 20px;
+}
+
+.right-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#main-header .header-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.current-profile {
+    padding: 0px 20px;
+}
+
+.profile-img {
+    display: flex;
+}
+
+.profile-img img {
+    width: 48px;
+    height: 48px;
+}
+
+.up-arrow {
+    position: relative;
+}
+
+.up-arrow span {
+    color: #9C9A92;
+}
+
+.up-arrow span {
+    position: absolute;
+    top: 0;
+    color: #fff;
+}
+
+.notification-message {
+    position: relative;
+}
+
+.notification-message i {
+    color: #9C9A92;
+    font-size: 20px;
+}
+
+.notification-message span {
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-radius: 50px;
+    background-color: #D55756;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.message {
+    position: relative;
+}
+
+.message span {
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-radius: 50px;
+    background-color: #D55756;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+}
+
+#main-header .icon-user {
+    width: 28px;
 }
