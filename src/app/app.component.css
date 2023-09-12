@@ -146,7 +146,7 @@ main {
     width: 28px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:992px) {
     .icon-items {
         gap: 5px;
     }

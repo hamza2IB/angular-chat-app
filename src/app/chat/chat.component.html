@@ -456,7 +456,15 @@
 
     /* Media Query */
 
-    @media (max-width:768px) {
+    @media (max-width:992px) {
+
+        .ui.grid>[class*="five wide"].column,
+        .ui.grid>[class*="four wide"].column,
+        .ui.grid>[class*="twelve wide"].column,
+        .ui.grid>[class*="eleven wide"].column
+        {
+            width: 100% !important;
+        }
 
         .converation-wrapper-container.desktop,
         .user-profile-wrapper.desktop {
