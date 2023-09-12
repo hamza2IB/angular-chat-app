@@ -8,14 +8,32 @@
     }
 
     .chat-page {
-        border: 1px solid red;
-        min-height: calc(100vh - 80px);
+        height: 100%;
+    }
+
+    /* Profile Container */
+
+    .user-profile-wrapper {
+        background-color: #2B2C2D;
+        z-index: 2;
+    }
+
+    .user-profile-wrapper.desktop {
+        display: block !important;
+    }
+
+    .user-profile-wrapper.mobile {
+        max-width: 375px;
+        position: fixed !important;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        overflow-y: scroll;
+        display: none;
     }
 
     .user-profile {
-        min-height: calc( 100vh - 80px);
         padding: 35px 30px 35px 40px;
-        background-color: #2B2C2D;
     }
 
     .user-profile .profile-header {
@@ -77,7 +95,7 @@
 
     .user-profile .user-description {
         margin-top: 39px;
-        background-color: #1B1C1D;
+        background-color: #1B1B1D;
         border-radius: 5px;
         color: white;
     }
@@ -122,7 +140,7 @@
     }
 
     .user-profile .ui.tabular.menu {
-        border-bottom: 1px solid #1B1C1D;
+        border-bottom: 1px solid #1B1B1D;
     }
 
     .user-profile .ui.tabular.menu .item:nth-child(1) {
@@ -156,7 +174,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #1B1C1D;
+        background-color: #1B1B1D;
         color: white;
         padding: 10px 0;
         border-radius: 5px;
@@ -208,6 +226,25 @@
         height: 50px;
     }
 
+    /* Profile Container */
+
+    /* Chat Container */
+
+    .converation-wrapper-container.desktop {
+        display: block !important;
+        background-color: #1B1B1D;
+        z-index: 2;
+    }
+
+    .converation-wrapper-container.mobile {
+        position: fixed !important;
+        max-width: 100%;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        background-color: #1B1B1D;
+    }
+
     .conversation-header {
         min-height: 80px;
         background-color: #2B2C2D;
@@ -243,7 +280,8 @@
 
     .conversation-body {
         padding: 50px 50px;
-        min-height: calc(100vh -  160px);
+        height: calc(100vh - 160px);
+        overflow-y: scroll;
     }
 
     .conversation-body .message {
@@ -303,196 +341,748 @@
     .conversation-footer {
         background-color: #2B2C2D;
         padding: 5px;
-        border: 1px solid #1B1C1D;
+        border: 1px solid #1B1B1D;
+        color: #ABAA97;
     }
+
     .conversation-footer textarea {
         width: 100%;
-        background-color: #1B1C1D;
+        background-color: #1B1B1D;
         padding: 10px 30px;
         color: white;
         border: none;
         outline: none;
     }
 
-    .conversation-footer .footer-bottom{
+    .conversation-footer .footer-bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 30px;
     }
 
-    .leftsection{
-        min-height: calc(100vh - 80px);
+    /* Chat Container */
+
+    /* ********************* Azeem css start ********************* */
+    .left-sidebar {
+        height: 100%;
+        background-color: #2B2C2D;
     }
 
+    .left-sidebar .ui.search {
+        display: flex;
+        align-items: center;
+    }
+
+    .left-sidebar i.icon,
+    .left-sidebar i.icons {
+        font-size: 1em;
+        color: #9C9A92;
+        margin-right: -10px;
+        position: absolute;
+        left: 20px;
+        z-index: 1;
+        height: auto;
+    }
+
+    .ui.input {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .ui.icon.input>input {
+        padding-left: 40px;
+        background-color: #3E3F41;
+        border-radius: 0px;
+        width: 100%;
+        color: #ffff;
+        height: 60px;
+    }
+
+    .left-sidebar .user-chat {
+        border-bottom: 2px solid #1B1B1D;
+    }
+
+    .left-sidebar .user-chat-content {
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        color: #F1F1F1;
+    }
+
+    .left-sidebar .user-points img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .left-sidebar .user-img img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 0px 10px;
+    }
+
+    .left-sidebar .user-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .left-sidebar .user-name h6 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    .left-sidebar .user-medals-images {
+        display: flex;
+    }
+
+    .left-sidebar .user-medal img {
+        height: 15px;
+        width: 15px;
+        margin-left: 5px;
+    }
+
+    .left-sidebar .user-chat-time {
+        color: #ACAB98;
+        font-size: 14px;
+    }
+
+    .left-sidebar .user-badges {
+        display: flex;
+        padding: 0px 10px;
+        margin: 5px auto;
+    }
+
+    /* Media Query */
+
+    @media (max-width:768px) {
+
+        .converation-wrapper-container.desktop,
+        .user-profile-wrapper.desktop {
+            display: none !important;
+        }
+
+        .converation-wrapper-container.mobile,
+        .user-profile-wrapper.mobile {
+            right: 0;
+        }
+
+        .user-profile {
+            padding: 35px 20px 35px 20px;
+        }
+
+        .user-profile .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .user-profile .profile-header i {
+            align-self: flex-start;
+            color: #9C9A92;
+            font-size: 25px;
+        }
+
+        .ui.stackable.grid>.wide.column.converation-wrapper-container.mobile {
+            padding: 0 !important;
+        }
+
+        .conversation-header {
+            padding: 0px 10px 0px 10px
+        }
+
+        .conversation-body {
+            padding: 30px 10px;
+        }
+
+        .conversation-body .message {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .conversation-header .user-name-profile {
+            cursor: pointer;
+        }
+
+        .conversation-body .message img {
+            margin-bottom: 10px;
+        }
+
+        .conversation-body .message.reply {
+            flex-direction: column;
+        }
+
+        .conversation-body .message.reply img {
+            align-self: flex-end;
+        }
+
+        .conversation-body .message .text {
+            width: 90%;
+            margin: 0;
+            border-radius: 0px 20px 20px 20px;
+        }
+
+        .conversation-body .message.reply .text {
+            width: 90%;
+            margin: 0;
+            align-self: flex-end;
+            border-radius: 20px 0px 20px 20px;
+        }
+    }
 </style>
-<section class="chat-page">
-    <div class="ui grid">
-        <div class="twelve wide column">
-            <div class="leftsection">
-                <div class="ui grid" style="min-height: 100vh;">
-                    <div class="four wide column"></div>
-                    <div class="twelve wide column">
-                        <div class="conversation-header">
-                            <div class="user-name-profile">
-                                <img src="/assets/icons/profile.png" />
-                                <h2>John Doe.</h2>
-                            </div>
-                            <i class="ellipsis vertical icon"></i>
+<section class="ui stackable grid chat-page">
+    <!-- Chat Container -->
+    <div class="twelve wide column" style="padding: 0 !important;">
+        <div class="ui grid stackable" style="height: 100%;width: 100%; margin-left: 0 !important;">
+            <!-- Users Chat -->
+            <div class="five wide column" style="padding: 0 !important;">
+                <div class="left-sidebar" (click)=toggleDisplayConversationIf()>
+                    <div class="ui search">
+                        <i class="search icon"></i>
+                        <div class="ui icon input">
+                            <input class="prompt" type="text" placeholder="Search here">
                         </div>
-                        <div class="conversation-body">
-                            <div class="message">
-                                <img src="/assets/icons/profile.png" />
-                                <div class="text">
-                                    <div class="user-name-date">
-                                        <h2> Jogn Doe</h2>
-                                        <span> 3:20am</span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
-                                        perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati ipsum, neque
-                                        sint tempora dolor earum accusamus iste iure officia.</p>
-                                </div>
+                        <div class="results"></div>
+                    </div>
+                    <div class="user-chat">
+                        <div class="user-chat-content">
+                            <div class="user-points">
+                                <img src="/assets/icons/arrowup.png" alt="icon-image">
+                                <div><span>+10</span></div>
                             </div>
-    
-                            <div class="message reply">
-                                <img src="/assets/icons/profile.png" />
-                                <div class="text">
-                                    <div class="user-name-date">
-                                        <h2> Jogn Doe</h2>
-                                        <span> 3:20am</span>
+                            <div class="user-img">
+                                <img src="/assets/icons/Oval.png" alt="user-image">
+                            </div>
+                            <div class="about-user">
+                                <div class="user-name">
+                                    <h6>Jhon S.</h6>
+                                    <span class="user-chat-time">
+                                        Today at 7:44 PM
+                                    </span>
+                                </div>
+                                <div class="user-badges">
+                                    <div class="number-of-badges">
+                                        +90
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
-                                        perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati ipsum, neque
-                                        sint tempora dolor earum accusamus iste iure officia.</p>
+                                    <div class="user-medals-images">
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/12BadgeofValour1.png" alt="user-image">
+                                        </div>
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/14MedalOfMerit1.png" alt="user-image">
+                                        </div>
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/7RealTrader1.png" alt="user-image">
+                                        </div>
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/10Strategist1.png" alt="user-image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-msg">
+                                    <p>
+                                        Lorem ipsum dummy text. .
+                                    </p>
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="conversation-footer">
-                            <textarea name="" id="" placeholder="Type your message here"></textarea>
-                            <div class="footer-bottom">
-                                <div>
-                                    <i class="hashtag icon"></i>
-                                    <i class="dollar sign icon"></i>
+                    </div>
+                    <div class="user-chat">
+                        <div class="user-chat-content">
+                            <div class="user-points">
+                                <img src="/assets/icons/arrow-down-red.png" alt="icon-image">
+                                <div><span>+10</span></div>
+                            </div>
+                            <div class="user-img">
+                                <img src="/assets/icons/Oval.png" alt="user-image">
+                            </div>
+                            <div class="about-user">
+                                <div class="user-name">
+                                    <h6>Jhon S.</h6>
+                                    <span class="user-chat-time">
+                                        Today at 7:44 PM
+                                    </span>
                                 </div>
-                                <div>
-                                    <i class="hashtag icon"></i>
-                                    <i class="dollar sign icon"></i>
+                                <div class="user-badges">
+                                    <div class="number-of-badges">
+                                        +90
+                                    </div>
+                                    <div class="user-medals-images">
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/12BadgeofValour1.png" alt="user-image">
+                                        </div>
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/14MedalOfMerit1.png" alt="user-image">
+                                        </div>
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/7RealTrader1.png" alt="user-image">
+                                        </div>
+                                        <div class="user-medal">
+                                            <img src="/assets/icons/10Strategist1.png" alt="user-image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-msg">
+                                    <p>
+                                        Lorem ipsum dummy text. .
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Users Chat -->
+            <!-- Conversation Wrapper Desktop -->
+            <div class="eleven wide column converation-wrapper-container desktop">
+                <div class="conversation-wrapper">
+                    <div class="conversation-header">
+                        <div class="user-name-profile" (click)=toggleDisplayProfileIf()>
+                            <img src="/assets/icons/profile.png" />
+                            <h2>John Doe.</h2>
+                        </div>
+                        <i class="ellipsis vertical icon"></i>
+                    </div>
+                    <div class="conversation-body">
+                        <div class="message">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message reply">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message reply">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message reply">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation-footer">
+                        <textarea name="" id="" placeholder="Type your message here"></textarea>
+                        <div class="footer-bottom">
+                            <div>
+                                <i class="hashtag icon"></i>
+                                <i class="dollar sign icon"></i>
+                            </div>
+                            <div>
+                                <i class="hashtag icon"></i>
+                                <i class="dollar sign icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Conversation Wrapper Mobile -->
+            <div *ngIf="isShowConversationIf" class="twelve wide column converation-wrapper-container mobile">
+                <div class="conversation-wrapper">
+                    <div class="conversation-header">
+                        <i class="arrow left icon" (click)=toggleDisplayConversationIf()></i>
+                        <div class="user-name-profile" (click)=toggleDisplayProfileIf()>
+                            <img src="/assets/icons/profile.png" />
+                            <h2>John Doe.</h2>
+                        </div>
+                        <i class="ellipsis vertical icon"></i>
+                    </div>
+                    <div class="conversation-body">
+                        <div class="message">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message reply">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message reply">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                        <div class="message reply">
+                            <img src="/assets/icons/profile.png" />
+                            <div class="text">
+                                <div class="user-name-date">
+                                    <h2> Jogn Doe</h2>
+                                    <span> 3:20am</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati
+                                    ipsum,
+                                    neque
+                                    sint tempora dolor earum accusamus iste iure officia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation-footer">
+                        <textarea name="" id="" placeholder="Type your message here"></textarea>
+                        <div class="footer-bottom">
+                            <div>
+                                <i class="hashtag icon"></i>
+                                <i class="dollar sign icon"></i>
+                            </div>
+                            <div>
+                                <i class="hashtag icon"></i>
+                                <i class="dollar sign icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="four wide column">
-            <div class="user-profile">
-                <div class="profile-header">
-                    <img src="/assets/icons/profile.png" class="profile-img" />
-                    <div class="about-user">
-                        <h2>Jhon S.</h2>
-                        <button class="follow-btn"><i class="plus icon"></i> Follow</button>
+    </div>
+    <!-- Profile Container For Desktop -->
+    <div class="four wide column user-profile-wrapper desktop">
+        <div class="user-profile">
+            <div class="profile-header">
+                <img src="/assets/icons/profile.png" class="profile-img" />
+                <div class="about-user">
+                    <h2>Jhon S.</h2>
+                    <button class="follow-btn"><i class="plus icon"></i> Follow</button>
+                </div>
+            </div>
+            <div class="social-icons">
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <div class="icon-div">
+                            <i class="user icon"></i>
+                            10,000
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="icon-div insta">
+                            <i class="instagram icon"></i>
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="icon-div">
+                            <i class="twitter icon"></i>
+                            Twitter
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="icon-div">
+                            <i class="globe icon"></i>
+                            loman.com
+                        </div>
                     </div>
                 </div>
-                <div class="social-icons">
+            </div>
+            <div class="user-description">
+                <div class="description-text-container">
+                    <i class="quote left icon"></i>
+                    <p>
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry
+                    </p>
+                </div>
+            </div>
+            <div class="profile-tab">
+                <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="first">Profile</a>
+                    <a class="item" data-tab="second">About me</a>
+                </div>
+                <div class="ui bottom attached tab segment active" data-tab="first">
                     <div class="ui grid">
-                        <div class="eight wide column">
-                            <div class="icon-div">
-                                <i class="user icon"></i>
-                                10,000
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
-                        <div class="eight wide column">
-                            <div class="icon-div insta">
-                                <i class="instagram icon"></i>
-                                Instagram
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
-                        <div class="eight wide column">
-                            <div class="icon-div">
-                                <i class="twitter icon"></i>
-                                Twitter
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
-                        <div class="eight wide column">
-                            <div class="icon-div">
-                                <i class="globe icon"></i>
-                                loman.com
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="user-description">
-                    <div class="description-text-container">
-                        <i class="quote left icon"></i>
-                        <p>
-                            Lorem ipsum is simply dummy text of the printing and typesetting industry
-                        </p>
-                    </div>
+                <div class="ui bottom attached tab segment" data-tab="second">
                 </div>
-                <div class="profile-tab">
-                    <div class="ui top attached tabular menu">
-                        <a class="item active" data-tab="first">Profile</a>
-                        <a class="item" data-tab="second">About me</a>
-                    </div>
-                    <div class="ui bottom attached tab segment active" data-tab="first">
-                        <div class="ui grid">
-                            <div class="three wide column">
-                                <div class="profile-box">
-                                    <img src="/assets/icons/arrowup.png" class="arrow-up">
-                                    <span>+90</span>
-                                    <span>Total</span>
-                                </div>
-                            </div>
-                            <div class="three wide column">
-                                <div class="profile-box">
-                                    <img src="/assets/icons/arrowup.png" class="arrow-up">
-                                    <span>+90</span>
-                                    <span>Total</span>
-                                </div>
-                            </div>
-                            <div class="three wide column">
-                                <div class="profile-box">
-                                    <img src="/assets/icons/arrowup.png" class="arrow-up">
-                                    <span>+90</span>
-                                    <span>Total</span>
-                                </div>
-                            </div>
-                            <div class="three wide column">
-                                <div class="profile-box">
-                                    <img src="/assets/icons/arrowup.png" class="arrow-up">
-                                    <span>+90</span>
-                                    <span>Total</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui bottom attached tab segment" data-tab="second">
-                    </div>
-                </div>
-                <div class="profile-badges">
-                    <h2>Badges</h2>
+            </div>
+            <div class="profile-badges">
+                <h2>Badges</h2>
 
+                <div class="ui grid">
+                    <div class="four wide column">
+                        <div class="badge-icon">
+                            <img src="/assets/icons/12BadgeofValour1.png" />
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="badge-icon">
+                            <img src="/assets/icons/14MedalOfMerit1.png" />
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="badge-icon">
+                            <img src="/assets/icons/7RealTrader1.png" />
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="badge-icon strategist">
+                            <img src="/assets/icons/10Strategist1.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Container For Mobile -->
+    <div *ngIf="isShowDivIf" class="four wide column user-profile-wrapper mobile">
+        <div class="user-profile">
+            <div class="profile-header">
+                <i class="arrow left icon" (click)=toggleDisplayProfileIf()></i>
+                <img src="/assets/icons/profile.png" class="profile-img" />
+                <div class="about-user">
+                    <h2>Jhon S.</h2>
+                    <button class="follow-btn"><i class="plus icon"></i> Follow</button>
+                </div>
+            </div>
+            <div class="social-icons">
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <div class="icon-div">
+                            <i class="user icon"></i>
+                            10,000
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="icon-div insta">
+                            <i class="instagram icon"></i>
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="icon-div">
+                            <i class="twitter icon"></i>
+                            Twitter
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="icon-div">
+                            <i class="globe icon"></i>
+                            loman.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-description">
+                <div class="description-text-container">
+                    <i class="quote left icon"></i>
+                    <p>
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry
+                    </p>
+                </div>
+            </div>
+            <div class="profile-tab">
+                <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="first">Profile</a>
+                    <a class="item" data-tab="second">About me</a>
+                </div>
+                <div class="ui bottom attached tab segment active" data-tab="first">
                     <div class="ui grid">
-                        <div class="four wide column">
-                            <div class="badge-icon">
-                                <img src="/assets/icons/12BadgeofValour1.png" />
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
-                        <div class="four wide column">
-                            <div class="badge-icon">
-                                <img src="/assets/icons/14MedalOfMerit1.png" />
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
-                        <div class="four wide column">
-                            <div class="badge-icon">
-                                <img src="/assets/icons/7RealTrader1.png" />
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
                         </div>
-                        <div class="four wide column">
-                            <div class="badge-icon strategist">
-                                <img src="/assets/icons/10Strategist1.png" />
+                        <div class="three wide column">
+                            <div class="profile-box">
+                                <img src="/assets/icons/arrowup.png" class="arrow-up">
+                                <span>+90</span>
+                                <span>Total</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui bottom attached tab segment" data-tab="second">
+                </div>
+            </div>
+            <div class="profile-badges">
+                <h2>Badges</h2>
+
+                <div class="ui grid">
+                    <div class="four wide column">
+                        <div class="badge-icon">
+                            <img src="/assets/icons/12BadgeofValour1.png" />
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="badge-icon">
+                            <img src="/assets/icons/14MedalOfMerit1.png" />
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="badge-icon">
+                            <img src="/assets/icons/7RealTrader1.png" />
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="badge-icon strategist">
+                            <img src="/assets/icons/10Strategist1.png" />
                         </div>
                     </div>
                 </div>

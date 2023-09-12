@@ -6,10 +6,18 @@ declare var $: any;
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements AfterViewInit {
+  isShowDivIf = false;
+  isShowConversationIf= false;
+  toggleDisplayProfileIf() {
+    this.isShowDivIf = !this.isShowDivIf;
+  }
+  toggleDisplayConversationIf() {
+    this.isShowConversationIf = !this.isShowConversationIf;
+  }
   ngAfterViewInit(): void {
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('.menu .item').tab();
     });
   }
-  
+
 }
