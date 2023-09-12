@@ -9,11 +9,11 @@
 
     .chat-page {
         border: 1px solid red;
-        min-height: 100vh;
+        min-height: calc(100vh - 80px);
     }
 
     .user-profile {
-        min-height: 100vh;
+        min-height: calc( 100vh - 80px);
         padding: 35px 30px 35px 40px;
         background-color: #2B2C2D;
     }
@@ -23,8 +23,9 @@
     }
 
     .user-profile .profile-img {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
     }
 
     .user-profile .about-user {
@@ -242,7 +243,7 @@
 
     .conversation-body {
         padding: 50px 50px;
-        min-height: calc(100vh - (80px + 109px));
+        min-height: calc(100vh -  160px);
     }
 
     .conversation-body .message {
@@ -258,6 +259,7 @@
     .conversation-body .message img {
         width: 70px;
         height: 70px;
+        border-radius: 50%;
     }
 
     .conversation-body .message .text {
@@ -319,58 +321,64 @@
         padding: 10px 30px;
     }
 
+    .leftsection{
+        min-height: calc(100vh - 80px);
+    }
+
 </style>
 <section class="chat-page">
     <div class="ui grid">
         <div class="twelve wide column">
-            <div class="ui grid" style="min-height: 100vh;">
-                <div class="four wide column"></div>
-                <div class="twelve wide column">
-                    <div class="conversation-header">
-                        <div class="user-name-profile">
-                            <img src="/assets/icons/profile.png" />
-                            <h2>John Doe.</h2>
+            <div class="leftsection">
+                <div class="ui grid" style="min-height: 100vh;">
+                    <div class="four wide column"></div>
+                    <div class="twelve wide column">
+                        <div class="conversation-header">
+                            <div class="user-name-profile">
+                                <img src="/assets/icons/profile.png" />
+                                <h2>John Doe.</h2>
+                            </div>
+                            <i class="ellipsis vertical icon"></i>
                         </div>
-                        <i class="ellipsis vertical icon"></i>
-                    </div>
-                    <div class="conversation-body">
-                        <div class="message">
-                            <img src="/assets/icons/profile.png" />
-                            <div class="text">
-                                <div class="user-name-date">
-                                    <h2> Jogn Doe</h2>
-                                    <span> 3:20am</span>
+                        <div class="conversation-body">
+                            <div class="message">
+                                <img src="/assets/icons/profile.png" />
+                                <div class="text">
+                                    <div class="user-name-date">
+                                        <h2> Jogn Doe</h2>
+                                        <span> 3:20am</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                        perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati ipsum, neque
+                                        sint tempora dolor earum accusamus iste iure officia.</p>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
-                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati ipsum, neque
-                                    sint tempora dolor earum accusamus iste iure officia.</p>
                             </div>
-                        </div>
-
-                        <div class="message reply">
-                            <img src="/assets/icons/profile.png" />
-                            <div class="text">
-                                <div class="user-name-date">
-                                    <h2> Jogn Doe</h2>
-                                    <span> 3:20am</span>
+    
+                            <div class="message reply">
+                                <img src="/assets/icons/profile.png" />
+                                <div class="text">
+                                    <div class="user-name-date">
+                                        <h2> Jogn Doe</h2>
+                                        <span> 3:20am</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
+                                        perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati ipsum, neque
+                                        sint tempora dolor earum accusamus iste iure officia.</p>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem id
-                                    perferendis minus magnam porro adipisci molestiae ipsam ipsa obcaecati ipsum, neque
-                                    sint tempora dolor earum accusamus iste iure officia.</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="conversation-footer">
-                        <textarea name="" id="" placeholder="Type your message here"></textarea>
-                        <div class="footer-bottom">
-                            <div>
-                                <i class="hashtag icon"></i>
-                                <i class="dollar sign icon"></i>
-                            </div>
-                            <div>
-                                <i class="hashtag icon"></i>
-                                <i class="dollar sign icon"></i>
+    
+                        <div class="conversation-footer">
+                            <textarea name="" id="" placeholder="Type your message here"></textarea>
+                            <div class="footer-bottom">
+                                <div>
+                                    <i class="hashtag icon"></i>
+                                    <i class="dollar sign icon"></i>
+                                </div>
+                                <div>
+                                    <i class="hashtag icon"></i>
+                                    <i class="dollar sign icon"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
